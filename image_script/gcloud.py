@@ -2,9 +2,10 @@ from google.cloud import datastore
 import requests
 import shutil
 import json
+import os
 
 proj_id = "docbottesting"
-bing_creds = 'key'
+creds_dir = os.environ['BING_API_KEY']
 
 
 def add_image(client, url, color, query):
