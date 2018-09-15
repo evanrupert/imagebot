@@ -3,6 +3,7 @@ import requests
 import shutil
 import json
 import os
+import subprocess
 
 proj_id = "docbottesting"
 bing_creds = os.environ['BING_API_KEY']
@@ -36,9 +37,13 @@ def fetch_images(client, query_term):
     return list(query.fetch())
 
 
-def print_image_urls(image_list):
+
+def download_images_async(image_list, out_file):
+    out = open(out_file, 'w')
     for image in image_list:
-        print(image['url'])
+        out.write(image['url'] + '\n')
+    out.close()
+    subprocess.call(["../imagedownloader", out_file])
 
 
 def download_images(image_list, outfolder):
