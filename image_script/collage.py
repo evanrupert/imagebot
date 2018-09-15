@@ -38,7 +38,7 @@ def createCollage(largeImagePath):
         for x in range(0, large_image.shape[1] - KERNEL_SIZE[0]+1, KERNEL_SIZE[0]):
             pickBestPattern(patt_imgs, x, y, large_image)
 
-    cv2.imwrite('images/output.png', large_image)
+    cv2.imwrite('image_script/images/output.png', large_image)
 
 input_file = sys.argv[1]
 keyword = sys.argv[2]
