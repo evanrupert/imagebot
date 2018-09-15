@@ -1,6 +1,7 @@
 package main
 
 import (
+	"time"
 	"os"
 	"os/exec"
 	"strings"
@@ -37,7 +38,7 @@ func Collage(session *discordgo.Session, msg *discordgo.MessageCreate) {
 
 	runCollageScript(filename, getKeyword(msgText))
 
-	sendMessageFile(session, msg.ChannelID, filename)
+	sendMessageFile(session, msg.ChannelID, outputPath)
 }
 
 func runCollageScript(filename string, keyword string) {
@@ -46,6 +47,8 @@ func runCollageScript(filename string, keyword string) {
 	cmd := exec.Command("python3", "image_script/collage.py", inputPath, keyword)
 
 	cmd.Run()
+
+	time.Sleep(60 * time.Second)
 }
 
 func getKeyword(msgText string) string {

@@ -8,7 +8,7 @@ import (
 	"path/filepath"
 )
 
-const imagesDir = "../images/"
+const imagesDir = "image_script/images/"
 const inputFilenameBase = "input"
 
 // DownloadImage downloads an image into the images directory
