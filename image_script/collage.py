@@ -6,7 +6,7 @@ import sys
 print('Successfully started, lad')
 
 KERNEL_SIZE = (20, 20)
-IMAGE_REPO_PATH = 'images/image_repo/'
+IMAGE_REPO_PATH = 'image_script/images/image_repo/'
 
 def pickBestPattern(patt_imgs, x, y, image):
     try:
