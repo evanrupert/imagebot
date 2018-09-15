@@ -36,12 +36,17 @@ func main() {
 }
 
 func messageHandler(session *discordgo.Session, msg *discordgo.MessageCreate) {
+
+	fmt.Println(msg.Content)
+
 	if !IsValidBotCommand(session, msg) {
 		return
 	} else if MessageIsTestRequest(msg) {
 		go Test(session, msg)
 	} else if MessageIsCollageRequest(msg) {
 		go Collage(session, msg)
+	} else if MessageIsMinecraftRequest(msg) {
+		go Minecraft(session, msg)
 	} else {
 		go Fallback(session, msg)
 	}

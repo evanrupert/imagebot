@@ -25,9 +25,8 @@ func Fallback(session *discordgo.Session, msg *discordgo.MessageCreate) {
 // Collage runs the process to create a collage and send it back to the user
 func Collage(session *discordgo.Session, msg *discordgo.MessageCreate) {
 	msgText := strings.ToLower(msg.Content)
-	url := msg.Attachments[0].URL
 
-	filename, err := DownloadImage(url)
+	filename, err := downloadMessageAttachment(msg)
 
 	if err != nil {
 		fmt.Println(err)
@@ -39,8 +38,38 @@ func Collage(session *discordgo.Session, msg *discordgo.MessageCreate) {
 	sendMessageFile(session, msg.ChannelID, outputPath)
 }
 
+// Minecraft runes the collage process but with only minecraft blocks
+func Minecraft(session *discordgo.Session, msg *discordgo.MessageCreate) {
+	filename, err := downloadMessageAttachment(msg)
+
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
+	runMinecraftScript(filename)
+
+	sendMessageFile(session, msg.ChannelID, outputPath)
+}
+
+func downloadMessageAttachment(msg *discordgo.MessageCreate) (string, error) {
+	url := msg.Attachments[0].URL
+
+	return DownloadImage(url)
+}
+
 func runCollageScript(filename string, keyword string) {
 	cmd := exec.Command("python3", "image_script/collage.py", filename, keyword)
+
+	err := cmd.Run()
+
+	if err != nil {
+		fmt.Println(err)
+	}
+}
+
+func runMinecraftScript(filename string) {
+	cmd := exec.Command("python3", "image_script/minecraft.py", filename)
 
 	err := cmd.Run()
 

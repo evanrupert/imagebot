@@ -1,33 +1,56 @@
 package main
 
 import (
-	"github.com/bwmarrin/discordgo"
-	"strings"
+  "fmt"
+  "github.com/bwmarrin/discordgo"
+  "strings"
 )
 
-const botName = "imagebot"
+const botID = "490372581833179166"
+const testCmd = "test"
+const collageCmd = "collage"
+const minecraftCmd = "minecraft"
 
 // MessageIsTestRequest returns true if the message is a valid test command
 func MessageIsTestRequest(msg *discordgo.MessageCreate) bool {
-	msgText := strings.ToLower(msg.Content)
-	return strings.HasSuffix(msgText, "test")
+  msgText := strings.ToLower(msg.Content)
+  return strings.HasSuffix(msgText, testCmd)
 }
 
 // MessageIsCollageRequest returns true if the message is a valid collage command
 func MessageIsCollageRequest(msg *discordgo.MessageCreate) bool {
-	msgText := strings.ToLower(msg.Content)
-	words := strings.Split(msgText, " ")
+  msgText := strings.ToLower(msg.Content)
+  words := strings.Fields(msgText)
 
-	return len(words) == 3 &&
-				 words[0] == botName &&
-				 words[1] == "collage" &&
-				 len(msg.Attachments) == 1
+  return len(words) == 3 &&
+         hasCommand(msgText, collageCmd) &&
+         len(msg.Attachments) == 1
+}
+
+// MessageIsMinecraftRequest returns true if the message is a valid minecraft command
+func MessageIsMinecraftRequest(msg *discordgo.MessageCreate) bool {
+  return hasCommand(msg.Content, minecraftCmd) &&
+         len(msg.Attachments) == 1
 }
 
 // IsValidBotCommand returns true if the given msg is a valid imagebot command
 func IsValidBotCommand(session *discordgo.Session, msg *discordgo.MessageCreate) bool {
-	msgText := strings.ToLower(msg.Content)
+  msgText := strings.ToLower(msg.Content)
 
-	return msg.Author.ID != session.State.User.ID &&
-		strings.HasPrefix(msgText, botName)
+  return msg.Author.ID != session.State.User.ID &&
+    strings.HasPrefix(msgText, getBotTag())
+}
+
+func hasCommand(str string, cmd string) bool {
+  lowerStr := strings.ToLower(str)
+  words := strings.Fields(lowerStr)
+
+  fmt.Println(words)
+
+  return words[0] == getBotTag() &&
+         words[1] == cmd
+}
+
+func getBotTag() string {
+  return fmt.Sprintf("<@%s>", botID)
 }
