@@ -1,7 +1,6 @@
 package main
 
 import (
-	"time"
 	"os"
 	"os/exec"
 	"strings"
@@ -47,8 +46,6 @@ func runCollageScript(filename string, keyword string) {
 	cmd := exec.Command("python3", "image_script/collage.py", inputPath, keyword)
 
 	cmd.Run()
-
-	time.Sleep(60 * time.Second)
 }
 
 func getKeyword(msgText string) string {
