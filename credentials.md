@@ -1,0 +1,12 @@
+- Azure
+    - For Bing image search
+    - Enviroment variable contains path of .JSON file
+    - BING_API_KEY
+- GCloud datastore
+    - Enviroment variable contains path of .JSON file
+    - GOOGLE_APPLICATION_CREDENTIALS
+- datastore project_id
+    - not a secret key
+    - name of database
+    - for instance : "docbottesting"
+- Discord API
