@@ -39,10 +39,10 @@ func messageHandler(session *discordgo.Session, msg *discordgo.MessageCreate) {
 	if !IsValidBotCommand(session, msg) {
 		return
 	} else if MessageIsTestRequest(msg) {
-		Test(session, msg)
+		go Test(session, msg)
 	} else if MessageIsCollageRequest(msg) {
-		Collage(session, msg)
+		go Collage(session, msg)
 	} else {
-		Fallback(session, msg)
+		go Fallback(session, msg)
 	}
 }
