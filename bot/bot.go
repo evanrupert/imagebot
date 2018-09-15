@@ -1,15 +1,15 @@
 package main
 
 import (
+	"fmt"
+	"github.com/bwmarrin/discordgo"
 	"os"
 	"os/signal"
 	"syscall"
-	"fmt"
-	"github.com/bwmarrin/discordgo"
 )
 
 func main() {
-	token := os.Getenv("DISCORD_TOKEN")	
+	token := os.Getenv("DISCORD_TOKEN")
 
 	discord, err := discordgo.New("Bot " + token)
 
@@ -18,7 +18,7 @@ func main() {
 		return
 	}
 
-	discord.AddHandler(messageCreate)
+	discord.AddHandler(messageHandler)
 
 	err = discord.Open()
 	if err != nil {
@@ -30,21 +30,19 @@ func main() {
 	sc := make(chan os.Signal, 1)
 
 	signal.Notify(sc, syscall.SIGINT, syscall.SIGTERM, os.Interrupt, os.Kill)
-	<- sc
+	<-sc
 
 	discord.Close()
 }
 
-func messageCreate(session *discordgo.Session, msg *discordgo.MessageCreate) {
-	if msg.Author.ID == session.State.User.ID {
+func messageHandler(session *discordgo.Session, msg *discordgo.MessageCreate) {
+	if !IsValidBotCommand(session, msg) {
 		return
-	}
-
-	if msg.Content == "ping" {
-		session.ChannelMessageSend(msg.ChannelID, "Pong!")
-	}
-
-	if msg.Content == "pong" {
-		session.ChannelMessageSend(msg.ChannelID, "Ping!")
+	} else if MessageIsTestRequest(msg) {
+		Test(session, msg)
+	} else if MessageIsCollageRequest(msg) {
+		Collage(session, msg)
+	} else {
+		Fallback(session, msg)
 	}
 }
