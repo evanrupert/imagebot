@@ -36,6 +36,11 @@ def fetch_images(client, query_term):
     return list(query.fetch())
 
 
+def print_image_urls(image_list):
+    for image in image_list:
+        print(image['url'])
+
+
 def download_images(image_list, outfolder):
     """Download images contained in output of fetch_images()"""
     for image in image_list:
