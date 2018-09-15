@@ -43,7 +43,7 @@ def download_images_async(image_list, out_file):
     for image in image_list:
         out.write(image['url'] + '\n')
     out.close()
-    subprocess.call(["../imagedownloader", out_file])
+    subprocess.call(["./imagedownloader", out_file])
 
 
 def download_images(image_list, outfolder):

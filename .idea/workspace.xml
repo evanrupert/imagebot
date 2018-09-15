@@ -2,88 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9b0f6d4-67fb-4ffc-89e9-f84d7d6098aa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/image_script/minecraft.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/bedrock.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/brick.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/clay.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/coal_ore.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/coarse_dirt.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/cobblestone.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/cobblestone_mossy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/concrete_black.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/concrete_blue.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/concrete_brown.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/concrete_cyan.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/concrete_gray.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/concrete_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/concrete_light_blue.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/concrete_lime.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/concrete_magenta.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/concrete_orange.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/concrete_pink.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/concrete_purple.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/concrete_red.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/concrete_silver.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/concrete_white.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/concrete_yellow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/crafting_table_top.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/emerald_block.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/end_bricks.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/glowstone.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/gold_block.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/hardened_clay.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/hardened_clay_stained_black.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/hardened_clay_stained_blue.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/hardened_clay_stained_brown.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/hardened_clay_stained_cyan.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/hardened_clay_stained_gray.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/hardened_clay_stained_green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/hardened_clay_stained_light_blue.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/hardened_clay_stained_lime.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/hardened_clay_stained_magenta.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/hardened_clay_stained_orange.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/hardened_clay_stained_pink.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/hardened_clay_stained_purple.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/hardened_clay_stained_red.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/hardened_clay_stained_silver.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/hardened_clay_stained_white.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/hardened_clay_stained_yellow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/ice_packed.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/iron_block.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/lapis_block.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/log_acacia.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/log_big_oak.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/log_birch.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/log_jungle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/log_oak.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/log_spruce.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/melon_side.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/nether_brick.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/netherrack.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/obsidian.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/planks_acacia.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/planks_big_oak.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/planks_birch.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/planks_jungle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/planks_oak.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/planks_spruce.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/prismarine_bricks.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/prismarine_dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/pumpkin_side.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/purpur_pillar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/quartz_block_side.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/red_sandstone_normal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/red_sandstone_smooth.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/redstone_block.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/redstone_lamp_on.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/sandstone_normal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/sandstone_smooth.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/snow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/sponge.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/stone.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/stone_slab_side.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_script/images/image_repo/tnt_side.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_script/collage.py" beforeDir="false" afterPath="$PROJECT_DIR$/image_script/collage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_script/gcloud.py" beforeDir="false" afterPath="$PROJECT_DIR$/image_script/gcloud.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -91,43 +12,66 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/image_script/gcloud.py">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="277">
+                    <caret line="45" column="23" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
+                    <folding>
+                      <element signature="e#0#34#0" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="FUSProjectUsageTrigger">
     <session id="1423278963">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="2" />
+          <entry key="py" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="2" />
+          <entry key="Python" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="77" />
+          <entry key="py" value="785" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="77" />
+          <entry key="Python" value="785" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/image_script/collage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="33" column="30" lean-forward="true" selection-end-line="44" selection-end-column="25" />
+            <state relative-caret-position="218">
+              <caret line="56" column="20" selection-start-line="56" selection-start-column="20" selection-end-line="57" selection-end-column="30" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -135,7 +79,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/image_script/minecraft.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
@@ -162,16 +106,17 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/image_script/collage.py" />
         <option value="$PROJECT_DIR$/image_script/minecraft.py" />
+        <option value="$PROJECT_DIR$/image_script/collage.py" />
+        <option value="$PROJECT_DIR$/image_script/gcloud.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="4">
     <option name="x" value="67" />
     <option name="y" value="25" />
-    <option name="width" value="757" />
-    <option name="height" value="654" />
+    <option name="width" value="767" />
+    <option name="height" value="875" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -224,16 +169,12 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1533" height="875" extended-state="6" />
+    <frame x="67" y="25" width="767" height="875" extended-state="4" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24966888" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21639785" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.23087248" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -241,6 +182,10 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.23087248" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -250,22 +195,32 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/image_script/collage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="33" column="30" lean-forward="true" selection-end-line="44" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/image_script/minecraft.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image_script/collage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="56" column="20" selection-start-line="56" selection-start-column="20" selection-end-line="57" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image_script/gcloud.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="45" column="23" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
           </folding>
         </state>
       </provider>
