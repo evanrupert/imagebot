@@ -3,6 +3,8 @@ import numpy as np
 import os
 import sys
 
+print('Successfully started, lad')
+
 KERNEL_SIZE = (20, 20)
 IMAGE_REPO_PATH = 'images/image_repo/'
 
