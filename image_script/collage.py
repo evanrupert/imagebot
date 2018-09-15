@@ -38,9 +38,6 @@ def createCollage(largeImagePath):
 
     cv2.imwrite('images/output.png', large_image)
 
-try:
-    input_file = sys.argv[1]
-    keyword = sys.argv[2]
-    createCollage(input_file)
-except:
-    print('ERROR (If this appears, ask dev to add better error output)')
+input_file = sys.argv[1]
+keyword = sys.argv[2]
+createCollage(input_file)
