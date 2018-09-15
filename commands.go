@@ -1,12 +1,10 @@
 package main
 
 import (
-	"time"
 	"os"
 	"os/exec"
 	"strings"
 	"fmt"
-	"path/filepath"
 	"github.com/bwmarrin/discordgo"
 )
 
@@ -32,7 +30,7 @@ func Collage(session *discordgo.Session, msg *discordgo.MessageCreate) {
 	filename, err := DownloadImage(url)
 
 	if err != nil {
-		fmt.Println("Error: %v", err)
+		fmt.Println(err)
 		return
 	}
 
@@ -42,17 +40,13 @@ func Collage(session *discordgo.Session, msg *discordgo.MessageCreate) {
 }
 
 func runCollageScript(filename string, keyword string) {
-	inputPath := filepath.Join("image_script/images", filename)
-
-	cmd := exec.Command("python3", "image_script/collage.py", inputPath, keyword)
+	cmd := exec.Command("python3", "image_script/collage.py", filename, keyword)
 
 	err := cmd.Run()
 
 	if err != nil {
 		fmt.Println(err)
 	}
-
-	time.Sleep(5 * time.Second)
 }
 
 func getKeyword(msgText string) string {
