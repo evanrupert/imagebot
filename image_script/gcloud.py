@@ -67,7 +67,7 @@ def bing_to_gcloud(client, term, count, offset=0, outfolder='tmp/'):
             )
 
     for value in r.json()['value']:
-        add_image(client, value['contentUrl'], value['accentColor'], term)
+        add_image(client, value['thumbnailUrl'], value['accentColor'], term)
 
 
 def main():
