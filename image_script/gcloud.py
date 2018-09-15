@@ -5,7 +5,7 @@ import json
 import os
 
 proj_id = "docbottesting"
-creds_dir = os.environ['BING_API_KEY']
+bing_creds = os.environ['BING_API_KEY']
 
 
 def add_image(client, url, color, query):
