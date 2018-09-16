@@ -65,8 +65,6 @@ func hasCommand(str string, cmd string) bool {
   lowerStr := strings.ToLower(str)
   words := strings.Fields(lowerStr)
 
-  fmt.Println(words)
-
   return words[0] == getBotTag() &&
          words[1] == cmd
 }

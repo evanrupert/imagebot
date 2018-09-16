@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"github.com/bwmarrin/discordgo"
 	"os"
 	"os/signal"
@@ -37,7 +38,9 @@ func main() {
 
 func messageHandler(session *discordgo.Session, msg *discordgo.MessageCreate) {
 
-	fmt.Println(msg.Content)
+	if msg.Author.ID != session.State.User.ID {
+		log.Println("Received Message: ", msg.Content)
+	}
 
 	if !IsValidBotCommand(session, msg) {
 		return
