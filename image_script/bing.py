@@ -1,6 +1,7 @@
 import requests
 import json
 import os
+import subprocess
 
 bing_creds = os.environ['BING_API_KEY']
 
