@@ -1,4 +1,3 @@
-
 import sys
 import requests
 from bs4 import BeautifulSoup
@@ -33,10 +32,10 @@ class ShortDesc:
 			fn.write(low_temp + '\n\n')	
 		else:
 			#Gets all information and writes to output
-			low_temp = self.seven_day[0].find(class_="temp temp-low").getText()
+			low_temp = self.seven_day[1].find(class_="temp temp-low").getText()
 			fn.write('Today\n')
 			fn.write(desc + '\n')	
-			fn.write(high_temp + '\n')
+			fn.write(high_temp.getText() + '\n')
 			fn.write(low_temp + '\n\n')
 
 	def tomorrow(self):
@@ -107,7 +106,7 @@ class ShortDesc:
 				fn.write(period + '\n')
 				fn.write(desc + '\n')
 				fn.write(high_temp + '\n')
-				(low_temp + '\n\n')
+				fn.write(low_temp + '\n\n')
 
 
 _string = sys.argv[1]
