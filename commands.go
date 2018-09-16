@@ -53,6 +53,18 @@ func Minecraft(session *discordgo.Session, msg *discordgo.MessageCreate) {
 	sendMessageFile(session, msg.ChannelID, outputPath)
 }
 
+// Help sends a help message
+func Help(session *discordgo.Session, msg *discordgo.MessageCreate) {
+	helpMsg := `
+**Commands:**
+* @ImageBot minecraft [input_file]                 |    Minecraft command takes [input_file] and reconstructs it using only Minecraft block textuers
+* @ImageBot collage [search keyword] [input_file]  |    Collage command takes [input_file] and reconstructs it using images found in Bing's image search for [search keyword]
+***note:*** [input_file] signifies that a file should be sent as an attachment
+`
+
+	session.ChannelMessageSend(msg.ChannelID, helpMsg)
+}
+
 func downloadMessageAttachment(msg *discordgo.MessageCreate) (string, error) {
 	url := msg.Attachments[0].URL
 

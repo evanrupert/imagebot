@@ -43,6 +43,8 @@ func messageHandler(session *discordgo.Session, msg *discordgo.MessageCreate) {
 		return
 	} else if MessageIsTestRequest(msg) {
 		go Test(session, msg)
+	} else if MessageIsHelpRequest(msg) {
+		go Help(session, msg)
 	} else if MessageIsCollageRequest(msg) {
 		go Collage(session, msg)
 	} else if MessageIsMinecraftRequest(msg) {

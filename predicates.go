@@ -27,6 +27,11 @@ func MessageIsCollageRequest(msg *discordgo.MessageCreate) bool {
          len(msg.Attachments) == 1
 }
 
+// MessageIsHelpRequest returns true if the message is a valid help command
+func MessageIsHelpRequest(msg *discordgo.MessageCreate) bool {
+  return hasCommand(msg.Content, "help")
+}
+
 // MessageIsMinecraftRequest returns true if the message is a valid minecraft command
 func MessageIsMinecraftRequest(msg *discordgo.MessageCreate) bool {
   return hasCommand(msg.Content, minecraftCmd) &&
