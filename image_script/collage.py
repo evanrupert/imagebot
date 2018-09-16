@@ -2,8 +2,6 @@ import cv2
 import numpy as np
 import os
 import sys
-from google.cloud import datastore
-import gcloud
 import bing
 
 print('Successfully started, lad')
@@ -63,9 +61,6 @@ def createCollage(largeImagePath, keyword):
 input_file = sys.argv[1]
 keyword = sys.argv[2]
 
-try:
-    ds_client = datastore.Client(gcloud.proj_id)
-except:
-    print('We messed up with ds_client.')
+os.system('mkdir ./image_script/images/image_repo')
 
 createCollage(input_file, keyword)
