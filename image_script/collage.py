@@ -4,6 +4,7 @@ import os
 import sys
 from google.cloud import datastore
 import gcloud
+import bing
 
 print('Successfully started, lad')
 
@@ -30,15 +31,17 @@ def createCollage(largeImagePath, keyword):
     large_image = cv2.imread(largeImagePath)
     large_image = np.asarray(large_image, dtype=np.float)
 
-    # Add more images to DB if necessary
-    numDL = len(gcloud.fetch_images(ds_client, keyword))
-    numToDL = NUM2DOWNLOAD - numDL
-    if numToDL > 0:
-        gcloud.bing_to_gcloud(ds_client, keyword, numToDL)
+    # # Add more images to DB if necessary
+    # numDL = len(gcloud.fetch_images(ds_client, keyword))
+    # numToDL = NUM2DOWNLOAD - numDL
+    # if numToDL > 0:
+    #     gcloud.bing_to_gcloud(ds_client, keyword, numToDL)
+    #
+    # # Download images from DB
+    # image_list = gcloud.fetch_images(ds_client, keyword)
+    # gcloud.download_images_async(image_list, 'image_script/urllist.txt')
 
-    # Download images from DB
-    image_list = gcloud.fetch_images(ds_client, keyword)
-    gcloud.download_images_async(image_list, 'image_script/urllist.txt')
+    bing.bing_img_search(keyword, NUM2DOWNLOAD, out_file='image_script/urllist.txt')
 
     # Read in images in repo
     patt_imgs = []
