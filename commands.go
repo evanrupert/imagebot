@@ -9,6 +9,7 @@ import (
 )
 
 const outputPath = "image_script/images/output.png"
+const weatherOutputPath = "output.txt"
 
 // Test assures the client that the bot is up and running
 func Test(session *discordgo.Session, msg *discordgo.MessageCreate) {
@@ -63,6 +64,40 @@ func Help(session *discordgo.Session, msg *discordgo.MessageCreate) {
 `
 
 	session.ChannelMessageSend(msg.ChannelID, helpMsg)
+}
+
+// WeatherToday sends the channel the current weather today
+func WeatherToday(session *discordgo.Session, msg *discordgo.MessageCreate) {
+	result := runWeatherCommand("today")
+
+	session.ChannelMessageSend(msg.ChannelID, result)
+}
+
+// WeatherTomorrow sends the weather forcast for tomorrow
+func WeatherTomorrow(session *discordgo.Session, msg *discordgo.MessageCreate) {
+	result := runWeatherCommand("tomorrow")
+
+	session.ChannelMessageSend(msg.ChannelID, result)
+}
+
+// WeatherWeek sends forcast for week
+func WeatherWeek(session *discordgo.Session, msg *discordgo.MessageCreate) {
+	result := runWeatherCommand("week")
+
+	session.ChannelMessageSend(msg.ChannelID, result)
+}
+
+func runWeatherCommand(cmdStr string) string {
+	cmd := exec.Command("python3", "weather_script/ShortDesc.py", cmdStr)
+
+	err := cmd.Run()
+
+	if err != nil {
+		fmt.Println(err)
+		return "Error reading weather information"
+	}
+
+	return ReadFile(weatherOutputPath)
 }
 
 func downloadMessageAttachment(msg *discordgo.MessageCreate) (string, error) {

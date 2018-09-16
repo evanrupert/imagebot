@@ -49,6 +49,12 @@ func messageHandler(session *discordgo.Session, msg *discordgo.MessageCreate) {
 		go Collage(session, msg)
 	} else if MessageIsMinecraftRequest(msg) {
 		go Minecraft(session, msg)
+	} else if MessageIsWeatherTodayRequest(msg) {
+		go WeatherToday(session, msg)
+	} else if MessageIsWeatherTomorrowRequest(msg) {
+		go WeatherTomorrow(session, msg)
+	} else if MessageIsWeatherWeekRequest(msg) {
+		go WeatherWeek(session, msg)
 	} else {
 		go Fallback(session, msg)
 	}

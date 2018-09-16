@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"io"
+	"io/ioutil"
 	"net/http"
 	"os"
 	"path/filepath"
@@ -38,4 +39,16 @@ func getFilename(url string) string {
 	filename := fmt.Sprintf("%s%s", inputFilenameBase, filepath.Ext(url))
 	
 	return filepath.Join(imagesDir, filename)
+}
+
+// ReadFile reades the contents of a file into a string
+func ReadFile(filename string) string {
+	buf, err := ioutil.ReadFile(filename)
+
+	if err != nil {
+		fmt.Println("Failed to read file")
+		return "Failed to read file"
+	}
+
+	return string(buf)
 }
