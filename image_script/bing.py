@@ -1,5 +1,6 @@
 import requests
 import json
+import os
 
 bing_creds = os.environ['BING_API_KEY']
 
